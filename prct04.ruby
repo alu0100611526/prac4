@@ -1,8 +1,10 @@
 
 puts ("Programa de multiplicacion y sumas de matrices")
 puts ("Introduzca el numero de filas y columnas que quiere que tengan las matrices (deben ser cuadras)")
-num = gets.chomp
-	
+
+flujoentrada = File.new("matrices.txt", "r")
+num = flujoentrada.gets
+
 n = num.to_i - 1
 
 #creamos las matrices 
@@ -12,11 +14,17 @@ b = Array.new(num.to_i){Array.new(num.to_i)}
 sum = Array.new(num.to_i){Array.new(num.to_i)}
 mult = Array.new(num.to_i){Array.new(num.to_i)}
 
-#llenamos las matrices con numeros aleatorios del 0 al 9
+#llenamos la matriz A
 for i in (0..n.to_i)
 	for j in (0..n.to_i)
-		a[i][j] = rand(10)
-		b[i][j] = rand(10)
+		a[i][j] = flujoentrada.gets.to_i
+	end
+end
+
+#llenamos la matriz B
+for i in (0..n.to_i)
+	for j in (0..n.to_i)
+		b[i][j] = flujoentrada.gets.to_i
 	end
 end
 
