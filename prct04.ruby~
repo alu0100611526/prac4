@@ -62,30 +62,3 @@ puts "\n"
 end
 
 
-# Multiplicación
-
-for i in (0..n.to_i)
-	for j in (0..n.to_i)
-			mult[i][j] = 0
-		for k in (0..n.to_i)
-			mult[i][j] += a[i][k] * b[k][j]
-		end
-		
-	end
-	
-end
-
-
-# Imprimir Multiplicacion
-puts "\n Multiplicacion: \n"
-for i in (0..n.to_i)
-	print " "
-	for j in (0..n.to_i)
-		print mult[i][j]
-		print " "
-	end
-puts "\n"
-end
-
-
-
