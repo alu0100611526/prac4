@@ -43,5 +43,22 @@ puts "\n"
 end
 
 
+# Suma
+for i in (0..n.to_i)
+	for j in (0..n.to_i)
+		sum[i][j] = a[i][j] + b[i][j]
+	end
+end
+
+# Imprimir Suma
+puts "\n Matriz suma: \n"
+for i in (0..n.to_i)
+	print " "
+	for j in (0..n.to_i)
+		print sum[i][j]
+		print " "
+	end
+puts "\n"
+end
 
 
